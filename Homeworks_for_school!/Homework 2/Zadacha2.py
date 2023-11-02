@@ -1,3 +1,5 @@
+from runntime import timer
+
 stack = []
 
 commands_ammount = int(input("Input the ammount of commands you would like to use!"))
