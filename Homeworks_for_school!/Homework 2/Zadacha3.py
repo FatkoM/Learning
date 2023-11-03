@@ -1,4 +1,3 @@
-from runntime import timer
 
 food= int(input())
 orders = list(map(int, input().split()))

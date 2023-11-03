@@ -1,5 +1,3 @@
-from runntime import timer
-
 stack = []
 
 commands_ammount = int(input("Input the ammount of commands you would like to use!"))
@@ -10,7 +8,8 @@ for i in range(0,commands_ammount):
         stack.append(command_input[1])
     
     elif "2" in command_input:
-        stack.pop()
+        if stack:
+            stack.pop()
     
     #Знам че min() и max() правят stack на list, но нямам силата да правя функция която да следи кой е най големия елемнт!!!!!!!!!
     elif "3" in command_input:
@@ -18,5 +17,8 @@ for i in range(0,commands_ammount):
     
     else:
         print((min(stack)))
+
 for i in stack:
-    print(i)
+    print(i,end=",")
+
+#не е отучнено какво да се прави в случай че команда 2 е активиране, и stack е празен!
