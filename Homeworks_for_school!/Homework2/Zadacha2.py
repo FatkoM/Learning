@@ -35,7 +35,6 @@ for i in range(0,commands_ammount):
     elif "3" in command_input:
         print(biggest_num)
     
-    elif "4" in command_input:
         print(smallest_num)
     
     else:
