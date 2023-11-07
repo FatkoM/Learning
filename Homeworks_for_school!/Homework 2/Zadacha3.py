@@ -1,6 +1,5 @@
-
-food= int(input())
-orders = list(map(int, input().split()))
+food= int(input("Input how much food you have!"))
+orders = list(map(int, input("Input your orders!").split()))
 
 served = 0
 remaining_orders = []
