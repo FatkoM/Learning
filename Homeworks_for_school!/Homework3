@@ -1,18 +1,27 @@
 user_input = int(input("Input how many cars will be entering"))
-
+#input който е число
 parking_spaces = set()
+#дефинираме празен сет
 for i in range(0,user_input):
+#Правим for цикъл от 0 до числото което сме задали (user_input)
     parking_input  = input("Input the command and the licenese number").split(", ")
+    #Искаме input всеки до като не спре цикълът.
     if parking_input[0].upper() == "IN":
+        #ак0 първата дума (parking_input[0]- онзачава първият индекс,а .upper() го прави да е с главни буквви) е равна на "IN" минава през проверката
         parking_spaces.add(parking_input[1])
+        #прибавяме втората дума от parking_input към parking_spaces.
     
     elif parking_input[0].upper() == "OUT":
+        # Ако не мине през първата проверка и ще дойде тук, където ще провери дали първата дума е равна на "OUT"
             parking_spaces.discard(parking_input[1])
+            #Премахва от  parking spaces първата дъма на parking_input
 
 
 if parking_spaces:
-     for i in parking_spaces:
-          print(i)
+    #Проверява дали parking_spaces има нещо в него
+    for i in parking_spaces:
+        print(i)
+        #принтира елемнтите на parking_spaces
 
 else:
-     print("Parking is empty")
+    print("Parking is empty")
